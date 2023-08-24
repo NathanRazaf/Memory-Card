@@ -1,0 +1,22 @@
+#root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.difficulties {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    margin: 20px 0;
+}

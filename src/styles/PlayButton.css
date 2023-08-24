@@ -1,0 +1,30 @@
+.play-button {
+    width: 150px;
+    height: 50px;
+    background: url('../assets/box2.png') no-repeat center center;
+    background-size: cover;
+    outline: none;
+    border: none;
+    font-family: 'VT323', monospace;
+    color: #059669;
+    font-size: 1.75rem;
+    font-weight: bolder;
+    cursor: pointer;
+    text-shadow: 2px 2px 0 #000;
+    transition: all 0.2s ease-in-out;
+}
+
+.play-button:hover {
+    color: #10b981;
+    transform: scale(1.1);
+}
+
+.play-button:active {
+    color: #047857;
+    transform: scale(1.05);
+}
+
+.play-button:disabled {
+    color: #6b7280;
+    cursor: not-allowed;
+}

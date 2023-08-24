@@ -1,0 +1,75 @@
+.card {
+    perspective: 1000px;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s; /* smooth flip effect duration */
+    transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* hides the elements on rotation */
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.62);
+}
+
+.card p {
+    font-family: 'PixelMplus12 Regular', monospace;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #000000;
+}
+
+.card-front {
+    background-color: #a133d9;
+    color: #ff1932;
+    justify-content: center;
+    align-items: center;
+}
+.card-front img {
+    width: 90%;
+    height: 90%;
+}
+
+.card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.no-pointer-events {
+    pointer-events: none;
+}
